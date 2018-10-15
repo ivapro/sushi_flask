@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-store,no-cache">
+
+    <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <script> alert('{{ message }}')</script>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <nav>
+
+        <div class="navigation">
+            <a href="{{ url_for('index') }}"><div><h3>Меню</h3></div></a>
+            <div><h3>Доставка</h3></div>
+            <div><h3>Контакты</h3></div>
+            <a href="{{ url_for('login') }}"><div><h3>Личный кабинет</h3></div></a>
+        </div>
+
+    </nav>
+
+    <article>
+
+        <form method="post" id="l_form">
+            {{ form.csrf_token }}
+            <p>
+                {{form.username.label}}
+                {{form.username(size=16)}}
+            </p>
+            <br/>
+            <p style="margin-left: -10px;">
+                {{form.password.label}}
+                {{form.password(size=16)}}
+            </p>
+
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <input type="submit" value="Войти">
+            <!--<p>{{ form.submit() }}</p>-->
+            <a href="{{ url_for('registration') }}"><p>Зарегестрироваться</p></a><a href="#reset"><p>Забыли пароль</p></a>
+
+        </form>
+
+    </article>
+
+</body>
+</html>

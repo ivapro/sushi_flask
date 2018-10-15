@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-store,no-cache">
+
+
+    <title>Регистрация</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <script> alert('{{ message }}')</script>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <nav>
+
+        <div class="navigation">
+            <a href="{{ url_for('index') }}"><div><h3>Меню</h3></div></a>
+            <div><h3>Доставка</h3></div>
+            <div><h3>Контакты</h3></div>
+            <a href="{{ url_for('login') }}"><div><h3>Личный кабинет</h3></div></a>
+        </div>
+
+    </nav>
+
+    <article>
+
+        <form  action="" method="post" id="r_form">
+            {{ form.csrf_token }}
+            <p>
+                {{form.username.label}}
+                {{form.username(size=16)}}
+            </p>
+            <br/>
+            <p style="margin-left: -10px;">
+                {{form.password.label}}
+                {{form.password(size=16)}}
+            </p>
+            <br/>
+            <p style="margin-left: -95px;">
+                {{form.repeat_password.label}}
+                {{form.repeat_password(size=16)}}
+            </p>
+            <br/>
+            <input type="submit" value="Зарегистрироваться">
+
+        </form>
+
+    </article>
+
+</body>
+</html>

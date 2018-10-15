@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-store,no-cache">
+
+        <title>SushiShop</title>
+        <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">-->
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+
+    <body>
+
+        {% with messages = get_flashed_messages() %}
+             {% if messages %}
+                   {% for message in messages %}
+                   <script> alert('{{ message }}')</script>
+                   {% endfor %}
+             {% endif %}
+          {% endwith %}
+
+        <nav>
+
+            <div class="navigation">
+                <a href="{{ url_for('index') }}"><div><h3>Меню</h3></div></a>
+                <div><h3>Доставка</h3></div>
+                <div><h3>Контакты</h3></div>
+                <a href="{{ url_for('login') }}"><div><h3>Личный кабинет</h3></div></a>
+            </div>
+
+        </nav>
+
+        <article>
+
+            <a href="{{ url_for('sushi') }}" class="menu" ><div>
+            <h3>Суши</h3>
+            </div></a>
+
+            <a href="{{ url_for('rolli') }}" class="menu" ><div>
+            <h3>Роллы</h3>
+            </div></a>
+
+            <a href="#supi" class="menu" ><div>
+            <h3>Супы</h3>
+            </div></a>
+
+            <a href="#wok" class="menu"><div>
+            <h3>Wok</h3>
+            </div></a>
+
+            <a href="#napitki" class="menu"><div>
+            <h3>Напитки</h3>
+            </div></a>
+
+            <a href="#pizza" class="menu"><div>
+            <h3>Пицца</h3>
+            </div></a>
+
+            <a href="#nabori" class="menu"><div>
+            <h3>Наборы</h3>
+            </div></a>
+
+            <a href="#salati_zakuski" class="menu"><div>
+            <h3>Салаты и закуски</h3>
+            </div></a>
+
+            <a href="#zap_rolli" class="menu"><div>
+            <h3>Запеченые роллы</h3>
+            </div></a>
+
+            <a href="#gorachee" class="menu"><div>
+            <h3>Горячее</h3>
+            </div></a>
+
+        </article>
+
+    </body>
+</html>

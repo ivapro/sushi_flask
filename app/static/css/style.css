@@ -1,0 +1,125 @@
+@font-face{
+    font-family:"Comic Sans MS";
+    src:url('ComicSans.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #00740d;
+}
+
+nav{
+    height: 70px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #810700;
+    border-radius: 20px;
+    margin-top:10px;
+}
+
+.navigation{
+
+    padding-top: 17px;
+}
+
+.navigation div{
+    height: 50px;
+    float:left;
+    width:10%;
+    margin-left:12%;
+    background-color: #6d1600;
+    text-align:center;
+    horiz-align: center;
+    border-radius: 15px 15px 0px 0px;
+    border-top:3px solid wheat;
+}
+
+.navigation h3{
+    padding-top:12px;
+    font-family: "Comic Sans MS";
+    color: wheat;
+}
+
+.navigation div:hover{
+    background-color: wheat;
+    border-color: #6d1600;
+}
+
+.navigation div:hover h3{
+    color:#6d1600;
+}
+
+article{
+    height: 500px;
+    width: 90%;
+    margin:20px auto;
+    border-radius:20px;
+    background-color: #a88e6e;
+}
+
+.menu div{
+    margin: 20px 4%;
+    width: 12%;
+    height: 200px;
+    float: left;
+    /*background-color: white;*/
+    text-align: center;
+    border-radius: 100px;
+}
+
+.menu h3{
+    color:rgba(255,0,0,0);
+    margin-top:90px;
+    font-size: 16pt;
+    font-family: "Comic Sans MS";
+}
+
+.menu:nth-child(1) div{    background-image: url(../img/sushi1.jpg);   }
+.menu:hover:nth-child(1) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/sushi1.jpg);   }
+.menu:nth-child(2) div {    background-image: url(../img/rolli1.jpg);   }
+.menu:hover:nth-child(2) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/rolli1.jpg);   }
+.menu:nth-child(3) div {    background-image: url(../img/soup1.jpg);   }
+.menu:hover:nth-child(3) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/soup1.jpg);   }
+.menu:nth-child(4) div{    background-image: url(../img/wok1.jpg);   }
+.menu:hover:nth-child(4) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/wok1.jpg);   }
+.menu:nth-child(5) div{    background-image: url(../img/napitki1.jpg);   }
+.menu:hover:nth-child(5) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/napitki1.jpg);   }
+.menu:nth-child(6) div{    background-image: url(../img/pizza1.jpg);   }
+.menu:hover:nth-child(6) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/pizza1.jpg);   }
+.menu:nth-child(7) div{    background-image: url(../img/nabori1.jpg);   }
+.menu:hover:nth-child(7) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/nabori1.jpg);   }
+.menu:nth-child(8) div{    background-image: url(../img/sal_zak1.jpg);   }
+.menu:hover:nth-child(8) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/sal_zak1.jpg);   }
+.menu:nth-child(9) div{    background-image: url(../img/zap_rolli1.jpg);   }
+.menu:hover:nth-child(9) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/zap_rolli1.jpg);   }
+.menu:nth-child(10) div{    background-image: url(../img/gorach1.jpg);   }
+.menu:hover:nth-child(10) div{   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255,255,255,0.3) 100%), url(../img/gorach1.jpg);   }
+
+.menu:hover h3{
+    color: rgba(0,0,0,1);
+}
+
+#l_form{
+    font-family: "Comic Sans MS";
+    width:200px;
+    padding:150px 40%;
+    text-align: center;
+}
+#l_form input{
+    font-family: "Comic Sans MS";
+    font-size:12pt;
+}
+
+#r_form{
+    font-family: "Comic Sans MS";
+    width:350px;
+    padding:150px 40%;
+}
+#r_form input{
+    font-family: "Comic Sans MS";
+    font-size:12pt;
+}
